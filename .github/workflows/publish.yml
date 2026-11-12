@@ -82,7 +82,7 @@ jobs:
               manifest["manifest"]="https://raw.githubusercontent.com/snowtroll75-debug/trg-eldritch-arts/main/module.json"
               manifest["download"]=f"{repo}/releases/download/v{version}/trg-eldritch-arts.zip"
               for original,name in entries:
-                  if name.endswith("/") or name=="module.json": continue
+                  if not name or name.endswith("/") or name=="module.json": continue
                   target=stage / name
                   target.parent.mkdir(parents=True,exist_ok=True)
                   with archive.open(original) as inp, target.open("wb") as out:
