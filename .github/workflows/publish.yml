@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "incoming/*.zip"
+      - ".github/workflows/publish.yml"
   workflow_dispatch:
 
 permissions:
@@ -48,14 +49,22 @@ jobs:
           stage=pathlib.Path("build")
           stage.mkdir(exist_ok=True)
           with zipfile.ZipFile(source) as archive:
-              names=archive.namelist()
-              if "module.json" not in names:
-                  raise SystemExit("Module ZIP must have module.json at the ZIP root")
-              for name in names:
+              original_names=archive.namelist()
+              for name in original_names:
                   path=pathlib.PurePosixPath(name)
                   if path.is_absolute() or ".." in path.parts or "\\" in name:
                       raise SystemExit(f"Unsafe archive entry: {name}")
-              manifest=json.loads(archive.read("module.json"))
+              prefix=""
+              if "module.json" not in original_names:
+                  candidates=[n for n in original_names if n.endswith("/module.json") and n.count("/")==1]
+                  if len(candidates)!=1:
+                      raise SystemExit("Module ZIP must have module.json at root or inside a single top-level module folder")
+                  prefix=candidates[0][:-len("module.json")]
+                  if any(not n.startswith(prefix) for n in original_names):
+                      raise SystemExit("Mixed root entries outside the module folder")
+              entries=[(n,n[len(prefix):]) for n in original_names if n.startswith(prefix)]
+              names=[relative for _,relative in entries]
+              manifest=json.loads(archive.read(prefix+"module.json"))
               if manifest.get("id") != "trg-eldritch-arts":
                   raise SystemExit("Wrong module ID (expected trg-eldritch-arts)")
               version=manifest.get("version","")
@@ -72,11 +81,11 @@ jobs:
               manifest["url"]=repo
               manifest["manifest"]="https://raw.githubusercontent.com/snowtroll75-debug/trg-eldritch-arts/main/module.json"
               manifest["download"]=f"{repo}/releases/download/v{version}/trg-eldritch-arts.zip"
-              for name in names:
+              for original,name in entries:
                   if name.endswith("/") or name=="module.json": continue
                   target=stage / name
                   target.parent.mkdir(parents=True,exist_ok=True)
-                  with archive.open(name) as inp, target.open("wb") as out:
+                  with archive.open(original) as inp, target.open("wb") as out:
                       shutil.copyfileobj(inp,out)
               new_manifest=json.dumps(manifest,indent=2,ensure_ascii=False)+"\n"
               (stage/"module.json").write_text(new_manifest,encoding="utf-8")
