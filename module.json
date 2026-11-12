@@ -1,0 +1,175 @@
+{
+  "id": "trg-eldritch-arts",
+  "title": "TRG Prime: Eldritch Arts",
+  "description": "The Eldritch Arts sourcebook for TRG Prime: High Magic, four races (Aetherial, Emberkin, Nyrinn, Scaelyn), backgrounds, five classes (Archmage, Sorcerer, Spellblade, Warlock, Witch), skill actions, feats, gear and catalysts, ley lines, wild magic and suppression, rituals and summoning circles, the Grimoire, magic items and relics. Block 1 (0.2.0, book v1.6): Chapter 2's races, heritages, racial abilities and backgrounds, the background feats, Chapter 4's skill actions, Chapter 6's exotic weapons and goods. Block 2a (0.3.0): High Magic casting, ley lines, Wild Magic and Magic Suppression areas, antimagic, Tap and Channel Ley Line, Tap Magical Energy. Block 2b (0.4.0): mundane ritual casting (the ritual variant, its three sacrifices, Ritual spells), summoning circles, true names, Spell Trickery, Borrow Spell. Block 3a (0.5.0): the Archmage, the Sorcerer and its seven birthrights, the Witch and her Soulbound Familiar, their specialist spells and hexes. Block 3b (0.6.0): their seven reactions. Block 4 (0.7.0): the Spellblade and its four paths, the Warlock and its eight bonded souls, Xithra, and their specialist spells. Block 5 (0.8.0): Chapter 5's racial and general feats. Block 6 (0.9.0): Chapter 5's 23 archetypes and 97 class feats, and the module's metamagic. Block 7 (0.10.0): the first half of Chapter 8's Grimoire, 42 spells. Block 8a (0.11.0): the second half's Bindings, Symbols and utilities, 22 spells. Block 8b (0.12.0): its rituals and the High Magic spells tied to Chapter 7, 17 spells.",
+  "version": "0.12.1",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.367"
+  },
+  "authors": [
+    {
+      "name": "Traris Games",
+      "url": "https://www.trarisgames.co.uk/"
+    }
+  ],
+  "url": "https://github.com/snowtroll75-debug/trg-eldritch-arts",
+  "manifest": "https://raw.githubusercontent.com/snowtroll75-debug/trg-eldritch-arts/main/module.json",
+  "download": "https://github.com/snowtroll75-debug/trg-eldritch-arts/releases/download/v0.12.1/trg-eldritch-arts.zip",
+  "relationships": {
+    "systems": [
+      {
+        "id": "trg-prime",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.687.1"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/eldritch-arts.mjs"
+  ],
+  "socket": true,
+  "packs": [
+    {
+      "name": "ea-races",
+      "label": "Eldritch Arts: Races",
+      "path": "packs/ea-races",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "races"
+        }
+      }
+    },
+    {
+      "name": "ea-heritages",
+      "label": "Eldritch Arts: Heritages",
+      "path": "packs/ea-heritages",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "heritages"
+        }
+      }
+    },
+    {
+      "name": "ea-abilities",
+      "label": "Eldritch Arts: Abilities",
+      "path": "packs/ea-abilities",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "abilities"
+        }
+      }
+    },
+    {
+      "name": "ea-classes",
+      "label": "Eldritch Arts: Classes",
+      "path": "packs/ea-classes",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "classes"
+        }
+      }
+    },
+    {
+      "name": "ea-backgrounds",
+      "label": "Eldritch Arts: Backgrounds",
+      "path": "packs/ea-backgrounds",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "backgrounds"
+        }
+      }
+    },
+    {
+      "name": "ea-feats",
+      "label": "Eldritch Arts: Feats",
+      "path": "packs/ea-feats",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "feats"
+        }
+      }
+    },
+    {
+      "name": "ea-spells",
+      "label": "Eldritch Arts: Spells",
+      "path": "packs/ea-spells",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "spells"
+        }
+      }
+    },
+    {
+      "name": "ea-weapons",
+      "label": "Eldritch Arts: Weapons",
+      "path": "packs/ea-weapons",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "weapons"
+        }
+      }
+    },
+    {
+      "name": "ea-gear",
+      "label": "Eldritch Arts: Gear",
+      "path": "packs/ea-gear",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "gear"
+        }
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Eldritch Arts",
+      "sorting": "m",
+      "color": null,
+      "packs": [
+        "ea-races",
+        "ea-heritages",
+        "ea-backgrounds",
+        "ea-classes",
+        "ea-abilities",
+        "ea-feats",
+        "ea-spells",
+        "ea-weapons",
+        "ea-gear"
+      ],
+      "folders": []
+    }
+  ],
+  "flags": {
+    "trg-prime": {
+      "sourcebook": "Eldritch Arts"
+    }
+  },
+  "documentTypes": {
+    "RegionBehavior": {
+      "leyLine": {},
+      "wildMagic": {},
+      "suppression": {}
+    }
+  }
+}
