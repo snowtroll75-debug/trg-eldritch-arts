@@ -71,8 +71,10 @@ jobs:
               if not re.fullmatch(r"\d+\.\d+\.\d+",version):
                   raise SystemExit("Module version must be X.Y.Z")
               packs=manifest.get("packs",[])
-              if len(packs)!=9:
-                  raise SystemExit(f"Expected nine compendium packs, found {len(packs)}")
+              # Every declared pack must be in the ZIP (0.17.2 ships 16: 14 Item packs, the
+              # sentient-item RollTables and the rules journal); a fixed count broke each block.
+              if not packs:
+                  raise SystemExit("The module declares no compendium packs")
               for pack in packs:
                   path=pack["path"].rstrip("/")+"/"
                   if not any(n.startswith(path) for n in names):
