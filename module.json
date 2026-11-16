@@ -2,7 +2,7 @@
   "id": "trg-eldritch-arts",
   "title": "TRG Prime: Eldritch Arts",
   "description": "The Eldritch Arts sourcebook for TRG Prime: High Magic, four races (Aetherial, Emberkin, Nyrinn, Scaelyn), backgrounds, five classes (Archmage, Sorcerer, Spellblade, Warlock, Witch), skill actions, feats, gear and catalysts, ley lines, wild magic and suppression, rituals and summoning circles, the Grimoire, magic items and relics. Block 1 (0.2.0, book v1.6): Chapter 2's races, heritages, racial abilities and backgrounds, the background feats, Chapter 4's skill actions, Chapter 6's exotic weapons and goods. Block 2a (0.3.0): High Magic casting, ley lines, Wild Magic and Magic Suppression areas, antimagic, Tap and Channel Ley Line, Tap Magical Energy. Block 2b (0.4.0): mundane ritual casting (the ritual variant, its three sacrifices, Ritual spells), summoning circles, true names, Spell Trickery, Borrow Spell. Block 3a (0.5.0): the Archmage, the Sorcerer and its seven birthrights, the Witch and her Soulbound Familiar, their specialist spells and hexes. Block 3b (0.6.0): their seven reactions. Block 4 (0.7.0): the Spellblade and its four paths, the Warlock and its eight bonded souls, Xithra, and their specialist spells. Block 5 (0.8.0): Chapter 5's racial and general feats. Block 6 (0.9.0): Chapter 5's 23 archetypes and 97 class feats, and the module's metamagic. Block 7 (0.10.0): the first half of Chapter 8's Grimoire, 42 spells. Block 8a (0.11.0): the second half's Bindings, Symbols and utilities, 22 spells. Block 8b (0.12.0): its rituals and the High Magic spells tied to Chapter 7, 17 spells.",
-  "version": "0.12.1",
+  "version": "0.17.2",
   "compatibility": {
     "minimum": "14",
     "verified": "14.367"
@@ -15,14 +15,14 @@
   ],
   "url": "https://github.com/snowtroll75-debug/trg-eldritch-arts",
   "manifest": "https://raw.githubusercontent.com/snowtroll75-debug/trg-eldritch-arts/main/module.json",
-  "download": "https://github.com/snowtroll75-debug/trg-eldritch-arts/releases/download/v0.12.1/trg-eldritch-arts.zip",
+  "download": "https://github.com/snowtroll75-debug/trg-eldritch-arts/releases/download/v0.17.2/trg-eldritch-arts.zip",
   "relationships": {
     "systems": [
       {
         "id": "trg-prime",
         "type": "system",
         "compatibility": {
-          "minimum": "3.687.1"
+          "minimum": "3.694.0"
         }
       }
     ]
@@ -139,6 +139,78 @@
           "extends": "gear"
         }
       }
+    },
+    {
+      "name": "ea-consumables",
+      "label": "Eldritch Arts: Consumables",
+      "path": "packs/ea-consumables",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "consumables"
+        }
+      }
+    },
+    {
+      "name": "ea-runes",
+      "label": "Eldritch Arts: Runes",
+      "path": "packs/ea-runes",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "runes"
+        }
+      }
+    },
+    {
+      "name": "ea-specific-items",
+      "label": "Eldritch Arts: Specific Items",
+      "path": "packs/ea-specific-items",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "specific-items"
+        }
+      }
+    },
+    {
+      "name": "ea-charged-items",
+      "label": "Eldritch Arts: Charged Items",
+      "path": "packs/ea-charged-items",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "charged-items"
+        }
+      }
+    },
+    {
+      "name": "ea-relics",
+      "label": "Eldritch Arts: Relics & Sentient Items",
+      "path": "packs/ea-relics",
+      "type": "Item",
+      "system": "trg-prime",
+      "flags": {
+        "trg-prime": {
+          "extends": "specific-items"
+        }
+      }
+    },
+    {
+      "name": "ea-tables",
+      "label": "Eldritch Arts: Sentient Item Tables",
+      "path": "packs/ea-tables",
+      "type": "RollTable"
+    },
+    {
+      "name": "ea-rules",
+      "label": "Eldritch Arts: Rules Reference",
+      "path": "packs/ea-rules",
+      "type": "JournalEntry"
     }
   ],
   "packFolders": [
@@ -155,7 +227,14 @@
         "ea-feats",
         "ea-spells",
         "ea-weapons",
-        "ea-gear"
+        "ea-gear",
+        "ea-consumables",
+        "ea-runes",
+        "ea-specific-items",
+        "ea-charged-items",
+        "ea-relics",
+        "ea-tables",
+        "ea-rules"
       ],
       "folders": []
     }
