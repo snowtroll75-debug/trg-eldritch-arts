@@ -1,8 +1,8 @@
 {
   "id": "trg-eldritch-arts",
   "title": "TRG Prime: Eldritch Arts",
-  "description": "The Eldritch Arts sourcebook for TRG Prime: High Magic, four races (Aetherial, Emberkin, Nyrinn, Scaelyn), backgrounds, five classes (Archmage, Sorcerer, Spellblade, Warlock, Witch), skill actions, feats, gear and catalysts, ley lines, wild magic and suppression, rituals and summoning circles, the Grimoire, magic items and relics. Block 1 (0.2.0, book v1.6): Chapter 2's races, heritages, racial abilities and backgrounds, the background feats, Chapter 4's skill actions, Chapter 6's exotic weapons and goods. Block 2a (0.3.0): High Magic casting, ley lines, Wild Magic and Magic Suppression areas, antimagic, Tap and Channel Ley Line, Tap Magical Energy. Block 2b (0.4.0): mundane ritual casting (the ritual variant, its three sacrifices, Ritual spells), summoning circles, true names, Spell Trickery, Borrow Spell. Block 3a (0.5.0): the Archmage, the Sorcerer and its seven birthrights, the Witch and her Soulbound Familiar, their specialist spells and hexes. Block 3b (0.6.0): their seven reactions. Block 4 (0.7.0): the Spellblade and its four paths, the Warlock and its eight bonded souls, Xithra, and their specialist spells. Block 5 (0.8.0): Chapter 5's racial and general feats. Block 6 (0.9.0): Chapter 5's 23 archetypes and 97 class feats, and the module's metamagic. Block 7 (0.10.0): the first half of Chapter 8's Grimoire, 42 spells. Block 8a (0.11.0): the second half's Bindings, Symbols and utilities, 22 spells. Block 8b (0.12.0): its rituals and the High Magic spells tied to Chapter 7, 17 spells.",
-  "version": "0.17.2",
+  "description": "The Eldritch Arts sourcebook for TRG Prime: High Magic, four races (Aetherial, Emberkin, Nyrinn, Scaelyn), backgrounds, five classes (Archmage, Sorcerer, Spellblade, Warlock, Witch), skill actions, feats, gear and catalysts, ley lines, wild magic and suppression, rituals and summoning circles, the Grimoire, magic items and relics. Block 1 (0.2.0, book v1.6): Chapter 2's races, heritages, racial abilities and backgrounds, the background feats, Chapter 4's skill actions, Chapter 6's exotic weapons and goods. Block 2a (0.3.0): High Magic casting, ley lines, Wild Magic and Magic Suppression areas, antimagic, Tap and Channel Ley Line, Tap Magical Energy. Block 2b (0.4.0): mundane ritual casting (the ritual variant, its three sacrifices, Ritual spells), summoning circles, true names, Spell Trickery, Borrow Spell. Block 3a (0.5.0): the Archmage, the Sorcerer and its seven birthrights, the Witch and her Soulbound Familiar, their specialist spells and hexes. Block 3b (0.6.0): their seven reactions. Block 4 (0.7.0): the Spellblade and its four paths, the Warlock and its eight bonded souls, Xithra, and their specialist spells. Block 5 (0.8.0): Chapter 5's racial and general feats. Block 6 (0.9.0): Chapter 5's 23 archetypes and 97 class feats, and the module's metamagic. Block 7 (0.10.0): the first half of Chapter 8's Grimoire, 42 spells. Block 8a (0.11.0): the second half's Bindings, Symbols and utilities, 22 spells. Block 8b (0.12.0): its rituals and the High Magic spells tied to Chapter 7, 17 spells. Block 11 (0.18.0): the Feat Additions — ten Artificer class feats (Modular Design, Advanced Design, Integrated Modularity with Quick Swap, Mechanised Assistant, Overclocked Weaponry, Power Sink, Instability Harness, Emergency Contraption, Flash of Insight, Tinkerer Precision), three Runemage class feats (Runic Anchor, Triggered Sigil, Grand Inscription), four Ascendan racial feats (Ley Resonance, Arcane Preparation, Heritage of the First Weave, Perfected Arcane Memory) and the Prepared trait.",
+  "version": "0.18.3",
   "compatibility": {
     "minimum": "14",
     "verified": "14.367"
@@ -15,14 +15,15 @@
   ],
   "url": "https://github.com/snowtroll75-debug/trg-eldritch-arts",
   "manifest": "https://raw.githubusercontent.com/snowtroll75-debug/trg-eldritch-arts/main/module.json",
-  "download": "https://github.com/snowtroll75-debug/trg-eldritch-arts/releases/download/v0.17.2/trg-eldritch-arts.zip",
+  "download": "https://github.com/snowtroll75-debug/trg-eldritch-arts/releases/download/v0.18.3/trg-eldritch-arts.zip",
   "relationships": {
     "systems": [
       {
         "id": "trg-prime",
         "type": "system",
         "compatibility": {
-          "minimum": "3.694.0"
+          "minimum": "3.694.0",
+          "verified": "3.713.1"
         }
       }
     ]
